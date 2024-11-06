@@ -1,4 +1,3 @@
-#added name to checkout step (line 12)
 name: Java Apps - Run Tests and Package
 on:
   push:
