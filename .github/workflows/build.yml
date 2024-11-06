@@ -9,8 +9,7 @@ jobs:
     name: Test and build samples
     runs-on: ubuntu-latest
     steps:
-      - name: checkout step
-        uses: actions/checkout@v3
+      - uses: actions/checkout@v3
       - name: set up JDK
         uses: actions/setup-java@v3
         with:
