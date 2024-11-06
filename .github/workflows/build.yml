@@ -1,3 +1,4 @@
+#reviewed permissions on github
 name: Java Apps - Run Tests and Package
 on:
   push:
