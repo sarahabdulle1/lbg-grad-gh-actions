@@ -15,12 +15,12 @@ jobs:
           java-version: '11'
           distribution: 'temurin'
       - name: run tests
-          run: mvn clean test | tee test.log
-        - name: build artifacts
-          run: mvn clean package -Dmaven.test.skip
-        - name: set up artifacts
-          run: mkdir artifacts && cp test.log.target/*.jar artifacts
-        - uses: actions/upload-artifact@v3
-            with: 
-              name: Package
-              path: artifacts
+        run: mvn clean test | tee test.log
+      - name: build artifacts
+        run: mvn clean package -Dmaven.test.skip
+      - name: set up artifacts
+        run: mkdir artifacts && cp test.log.target/*.jar artifacts
+      - uses: actions/upload-artifact@v3
+        with: 
+          name: Package
+          path: artifacts
